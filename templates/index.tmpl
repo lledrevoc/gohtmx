@@ -1,0 +1,10 @@
+{{define "index.tmpl"}}
+{{template "base" .}}
+{{end}}
+
+{{define "content"}}
+  <h2>Home</h2>
+  <p>{{.Message}}</p>
+  <button hx-get="/time" hx-target="#time-container" hx-swap="innerHTML">Get server time</button>
+  <div id="time-container" style="margin-top:1rem"></div>
+{{end}}

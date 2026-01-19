@@ -1,0 +1,26 @@
+{{define "base"}}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{.Title}}</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a> | <a href="/about">About</a>
+    </nav>
+  </header>
+  <main>
+    {{template "content" .}}
+  </main>
+  <footer>
+    <small>Go standard lib web app</small>
+  </footer>
+  <script src="/static/js/htmx.min.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
+{{end}}
